@@ -69,7 +69,7 @@ def get_status(conn):
 
         hourstt, minutestt = divmod(total_time / 60, 60)
         hourstd, minutestd = divmod(today_time / 60, 60)
-        print(f"Project '{project[1]}':\tTotal time: {int(hourstt):02d}:{int(minutestt):02d}, Today: {int(hourstd):02d}:{int(minutestd):02d} hours")
+        print(f"Project {project[1]:12s} Today: {int(hourstd):02d}:{int(minutestd):02d}, Total time: {int(hourstt):02d}:{int(minutestt):02d},")
 
 def get_time_worked_today(conn):
     now = datetime.now()
