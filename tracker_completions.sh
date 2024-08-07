@@ -3,7 +3,7 @@
 # Helper function to get the list of project names
 _get_tracker_projects() {
   local projects
-  projects=("${(@f)$(sqlite3 ${HOME}/.config/timetracking/tracker.db "SELECT name FROM projects;")}")
+  projects=("${(@f)$(sqlite3 ${HOME}/.cache/pstimetrack.db "SELECT name FROM projects;")}")
   _describe 'projects' projects
 }
 
